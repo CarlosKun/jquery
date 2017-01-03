@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Big Box</title>
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	<script src="js/lib/TweenMax.min.js"></script>
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- <div class="box-deep"></div> -->
+<!--
+<div class="bigBox-contenedor" align="center">
+	<div class="box-close"><img class="img-vector" src="img/cancel.svg" alt=""></div>
+	<div class="box-circle"><img  class="img-vector" src="img/thumbs-up.svg" alt=""></div>
+	<div class="box-contenido">
+		<span class="box-title">Genial</span>
+		<span class="box-text">Estamos listos para proceder usando Udemy</span>
+	</div>
+	<button class="box-btn" name="button">Empezar curso</button>
+</div>
+-->
+<div class="container">
+	<h1>BigBox: <small>Notification</small></h1>
+	<hr>
+	<button class="btn btn-primary" name="button">Show bigBox</button>
+</div>
+<script src="js/box.js" charset="utf-8"></script>
+<script>
+	$('button').on('click',function(){
+		$.box({
+			title: 'Desde btn',
+			content: 'Contenido del bigbox',
+			btnText: 'Ingresar a Udemy'
+		},function(boton){
+			console.log(boton);
+		});
+	});
+</script>
+</body>
+</html>

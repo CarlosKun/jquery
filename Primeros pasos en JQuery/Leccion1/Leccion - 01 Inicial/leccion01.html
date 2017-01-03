@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Lección 01 - Bootstrap</title>
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" title="no title">
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	<style>
+		.text-green{
+			color: green;
+			font-weight: bold;
+		}
+	</style>
+	<script>
+		/* Version larga */
+		// $(document).ready(function() {
+		// 	// jQuery('li').addClass('text-green');
+		// 	$('li').addClass('text-green');
+		// });
+		/* short version */
+		$(function(){
+			$('li:first-child').addClass('text-green');
+			$('li:nth-child(2)').css('color','white');
+			$('li:nth-child(2)').css('text-shadow','1px 2px black');
+			$('li:nth-child(3)').css('color','red');
+		});
+	</script>
+</head>
+
+<body>
+	<div class="container">
+		<h1>Leccion Bootstrap</h1>
+		<hr>
+		<ul>
+			<li>Hola 1</li>
+			<li>Hola 2</li>
+			<li>Hola 3</li>
+		</ul>
+
+		<ul>
+			<li>Hola 1</li>
+			<li>Hola 2</li>
+			<li>Hola 3</li>
+		</ul>
+	</div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+.slider{
+  width: 600px;
+  height: 300px;
+  background: green;
+  overflow: hidden;
+}
+
+.slider ul{
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+}
+
+.slideShowButtons{
+  width: 600px;
+  display: flex;
+  position: relative;
+  top: -30px;
+}
+
+.slideShowButtons .slideButton{
+  cursor: pointer;
+  border-radius: 100%;
+  width: 15px;
+  height: 15px;
+  background-color: #a1a1a1;
+  margin-left: 4px;
+  padding: 10px;
+}

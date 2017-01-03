@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Lección 05 - On y Bind</title>
+
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+	<h1>Lección 05: Tarea</h1>
+	<hr>
+	<select class="form-control" id="cmbBase" name="">
+		<option value="1">1</option>
+		<option value="2">2</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+		<option value="5" selected>5</option>
+
+	</select>
+	<br>
+  <button type="button" class="btn btn-primary">Agregar multiplicacion</button>
+  <br><br>
+  <table class="table table-streped center" style="text-align: center;">
+    <tr>
+      <td><b>Base</b></td>
+      <td><b>x</b></td>
+      <td><b>Numero</b></td>
+      <td><b>=</b></td>
+      <td><b>Resultado</b></td>
+    </tr>
+  </table>
+</div>
+
+<script>
+  (function(){
+
+    var numero = 0;
+    var resultado = 0;
+    $("body").on("click",".btn",function(){
+      numero++;
+			var base = $("#cmbBase").val();
+      resultado = base * numero;
+      var td = "<tr><td>"+ base + "</td><td>x</td><td>"+ numero +"</td><td>=</td><td>"+ resultado +"</td></tr>";
+      $("table").append(td);
+    });
+
+		// Fucion que detecta el cambio de la base
+		$("#cmbBase").on("change",function(){
+			$("tr").not(":eq(0)").remove();
+			numero = 0;
+		})
+  })();
+</script>
+
+
+</body>
+</html>

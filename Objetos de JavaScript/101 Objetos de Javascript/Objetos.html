@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Objetos 101</title>
+	<!-- Importacion del jQuery -->
+	<script src="js/lib/jquery-2.1.4.min.js"></script>
+	<!-- Importacion del Bootstrap -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container text-center">
+	<h1>Objetos 101: <small>Comprendiendo lo básico</small></h1>
+	<hr>
+	<button type="button" class="btn btn-primary" name="button">On</button>
+	<button type="button" class="btn btn-danger" name="button">Off</button>
+
+</div>
+
+<script>
+	var carro = {
+		estado: false,
+		llantas: 4,
+		puertas: 5,
+		marca: {
+			creador: 'Nissan',
+			telefono: '322-100-80-52',
+			direccion: 'La Aurora'
+		},
+		colores: ['blue','white','black'],
+		arrancar: function() {
+			if (carro.estado) {
+				console.log("El vehiculo estaba encendido");
+			}else{
+				console.log("Encendiendo el motor");
+				carro.estado = true;
+			}
+		},
+		apagar: function () {
+			if (!carro.estado) {
+				console.log("El vehiculo ya estaba apagado");
+			}else{
+				console.log("Apagando el motor");
+				carro.estado = false;
+			}
+		}
+	};
+
+	$(".btn-primary").on("click",function(){
+		console.log(carro.arrancar());
+	});
+
+	$(".btn-danger").on("click",function(){
+		console.log(carro.apagar());
+	});
+
+</script>
+</body>
+</html>
